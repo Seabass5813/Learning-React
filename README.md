@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### When You First Download the File Node_Modules File Will be Missing
+
+To fix this just run: npm install in your terminal. The folder should download and you will be able to run the local host after that.
+
 ### Video Playlist URL: https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d
 
 ## Available Scripts
