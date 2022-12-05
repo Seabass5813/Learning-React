@@ -4,7 +4,8 @@ import { useHistory } from "react-router-dom";
 const Create = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
-    const [author, setAuthor] = useState();
+    const [author, setAuthor] = useState('yoshi');
+    //Fixed author not displaying ^
     const [isPending, setIsPending] = useState(false);
     const history = useHistory();
 
