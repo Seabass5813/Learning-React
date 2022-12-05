@@ -10,6 +10,8 @@ To fix this just run: npm install in your terminal. The folder should download a
 
 ### Video Playlist URL: https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d
 
+### Final Chapter was Chapter 32 - 404 Pages & Next Steps
+
 
 
 ## Available Scripts
