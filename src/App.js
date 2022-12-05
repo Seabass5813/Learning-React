@@ -1,6 +1,6 @@
-
 import Navbar from './Navbar';
 import Home from './Home';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 function App() {
   /*const title = 'Welcome to the New Blog';*/
@@ -13,31 +13,25 @@ function App() {
   const link = 'https://www.google.com/';
 
   return (
+    <Router>
     <div className="App">
       <Navbar />
-      <div className="content">
-        {/*<h1> { title }</h1>*/}
-        <Home />
-        <p> Liked { likes } times. </p>
-
-         {/*<p> { person } </p>*/}
-
-         <p> { 10 } </p>
-         <p> { "Hello, World!" } </p>
-         <p> { [1,2,3,4,5] } </p>
-         <p> { Math.random() * 10 } </p>
-          {/* Both of the ones below work. The second one works because the link variable was created way above ^ */ }
-         <a href='https://www.google.com/'> Google Site </a>
-        
-         { /* Use below to create breaks */}
-         
-         <br></br>
-
-         {<a href= { link }> Google Site</a>}
-
+      <div className="content">    
+        <Switch>
+          <Route path='/'>
+            <Home />
+          </Route>
+        </Switch>
       </div>
     </div>
+    </Router>
   );
 }
 
 export default App;
+
+
+
+
+
+
