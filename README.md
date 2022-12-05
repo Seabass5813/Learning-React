@@ -6,6 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 To fix this just run: npm install in your terminal. The folder should download and you will be able to run the local host after that.
 
+### Run the following in a terminal npm run start
+
+### Run the following in a second terminal npx json-server --watch data/db.json --port 8000
+
 ### Hitting ctrl + / comments out highlighted sections
 
 ### Video Playlist URL: https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d
