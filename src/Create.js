@@ -3,13 +3,24 @@ import { useState } from "react";
 const Create = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
-    const [author, setAuthor] = useState('');
+    const [author, setAuthor] = useState();
+    const [isPending, setIsPending] = useState(false);
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
         const blog = { title, body, author };
 
-        console.log(blog)
+        setIsPending(true);
+
+        fetch('http://localhost:8000/blogs', {
+            method: 'POST',
+            headers: { "Content-Type": "application/json"},
+            body: JSON.stringify(blog)
+        }).then(() => {
+            console.log('New blog added');
+            setIsPending(false);
+        })
     }
 
     return (  
@@ -20,6 +31,7 @@ const Create = () => {
                 <label>Blog title:</label>
                 
                 <input type="text" 
+                placeholder="Input Text Here"
                 required 
                 value={title}
                 onChange={ (e) => setTitle(e.target.value)}
@@ -27,7 +39,8 @@ const Create = () => {
                 
                 <label>Blog body:</label>
                 
-                <textarea 
+                <textarea
+                placeholder="Input Text Here" 
                 required
                 value={body}
                 onChange={ (e) => setBody(e.target.value)}
@@ -37,15 +50,16 @@ const Create = () => {
                 
                 <select
                 value={author}
-                onChange={ (e) => setAuthor(e.target.value)}
+                onChange={(e) => setAuthor(e.target.value)}
                 >
                     <option value="mario">mario</option>
                     <option value="yoshi">yoshi</option>
                 </select>
-                <button>Add Blog</button>
-                <p>{ title }</p>
+                { !isPending && <button>Add Blog</button>}
+                { isPending && <button>Adding blog...</button>}
+                {/* <p>{ title }</p>
                 <p>{ body }</p>
-                <p>{ author }</p>
+                <p>{ author }</p> */}
             </form>
         </div>
     );
