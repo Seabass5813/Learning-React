@@ -1,4 +1,4 @@
-{/*<h1> { title }</h1>*/}
+<!-- {/*<h1> { title }</h1>*/}
 
         {/*<p> Liked { likes } times. </p>
 
@@ -19,7 +19,7 @@
 
 ^ Removed from App.js
 
-{/*<button onClick={() => setName('luigi')}>change name</button>
+{<button onClick={() => setName('luigi')}>change name</button>
             <p>{ name }</p>*/}
 
             {/*<BlogList blogs={blogs.filter((blog) => blog.author === 'mario')} title="Mario's blogs" />*/}
@@ -42,4 +42,4 @@
 
   const link = 'https://www.google.com/';
   
-^ Removed from App.js file
+^ Removed from App.js file -->
