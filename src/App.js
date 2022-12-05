@@ -4,14 +4,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Create from './Create';
 
 function App() {
-  /*const title = 'Welcome to the New Blog';*/
-  const likes = 50
-
-  //booleans and objects will not display on websites. Like the one below.
-
-  //const person = { name : 'Yoshi', age: 30};
-
-  const link = 'https://www.google.com/';
 
   return (
     <Router>
