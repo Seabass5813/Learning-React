@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const Create = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState();
     const [isPending, setIsPending] = useState(false);
+    const history = useHistory();
 
 
     const handleSubmit = (e) => {
@@ -20,7 +22,11 @@ const Create = () => {
         }).then(() => {
             console.log('New blog added');
             setIsPending(false);
+            //The following would basically make the user move back to the previous thing they had open before hitting submit => history.go(-1)
+            history.push('/');
         })
+
+        
     }
 
     return (  
